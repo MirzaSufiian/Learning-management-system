@@ -1,0 +1,1050 @@
+
+:root {
+    --main: #1e3a5f;
+    --main-dark: #14263e;
+    --accent: #f39c12;
+    --light: #f4f6f9;
+    --text: #333333;
+    --white: #ffffff;
+}
+ 
+ 
+/* ---------- Reset and Basic Styles ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--white);
+}
+ 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--main);
+    margin-bottom: 10px;
+}
+ 
+p {
+    margin-bottom: 10px;
+}
+ 
+a {
+    text-decoration: none;
+    color: var(--main);
+    transition: color 0.3s;
+}
+ 
+ul {
+    list-style: none;
+}
+ 
+img {
+    max-width: 100%;
+    display: block;
+}
+ 
+ 
+/* ---------- Sections ---------- */
+section {
+    padding: 60px 8%;
+    animation: fadeUp 0.8s ease;
+}
+ 
+section > h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+ 
+/* Sections with a light grey background */
+.search,
+.courses,
+.reason,
+.testimonial,
+.outcome,
+.requirement,
+.review,
+.progress,
+.assignment,
+.achievement,
+.schedule,
+.mission,
+.team,
+.popular,
+.enrolled,
+.goal,
+.info,
+.map {
+    background-color: var(--light);
+}
+ 
+ 
+/* ---------- Buttons ---------- */
+button,
+.welcome a,
+.continue-card a,
+.enrolled-card a,
+.completed-card a,
+.category-card a,
+.cta a,
+.action a {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: var(--accent);
+    color: var(--white);
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+ 
+button:hover,
+.welcome a:hover,
+.continue-card a:hover,
+.enrolled-card a:hover,
+.completed-card a:hover,
+.category-card a:hover,
+.cta a:hover,
+.action a:hover {
+    background-color: var(--main);
+    border-color: var(--main);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+ 
+/* Second button next to a first button looks outlined */
+.hero button + button,
+.course-banner button + button,
+.enrollment button + button,
+.cta button + button,
+.cta button + a,
+.cta a + a,
+.enrolled-card a + a,
+.completed-card a + a {
+    background-color: transparent;
+    border-color: var(--main);
+    color: var(--main);
+    margin-left: 8px;
+}
+ 
+ 
+/* ---------- Form Fields ---------- */
+input,
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+ 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+}
+ 
+ 
+/* ---------- Navbar ---------- */
+.navbar,
+.dashboard-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: var(--main);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ 
+.navbar h1,
+.dashboard-navbar h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+    color: var(--white);
+}
+ 
+.navbar h1 a,
+.dashboard-navbar h1 a {
+    color: var(--white);
+}
+ 
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+ 
+.navbar li a {
+    color: var(--white);
+}
+ 
+.navbar li a:hover,
+.navbar .active {
+    color: var(--accent);
+}
+ 
+/* Login button next to Register button */
+.navbar li:nth-last-child(2) button {
+    background-color: transparent;
+    border-color: var(--white);
+}
+ 
+.navbar li:nth-last-child(2) button:hover {
+    background-color: var(--white);
+    color: var(--main);
+}
+ 
+ 
+/* ---------- Dashboard Navbar ---------- */
+.dashboard-navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+ 
+.dashboard-navbar h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+    color: var(--accent);
+}
+ 
+.dashboard-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+ 
+.dashboard-navbar-right button,
+.dashboard-navbar-right a {
+    background: none;
+    border: none;
+    padding: 5px;
+    font-size: 22px;
+    transition: transform 0.3s;
+}
+ 
+.dashboard-navbar-right button:hover,
+.dashboard-navbar-right a:hover {
+    background: none;
+    transform: scale(1.2);
+}
+ 
+ 
+/* ---------- Hero Section (Home) ---------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(to right, #eaf1fb, #ffffff);
+}
+ 
+.hero-content {
+    flex: 1;
+}
+ 
+.hero h1 {
+    font-size: 44px;
+    line-height: 1.2;
+}
+ 
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+ 
+.hero img {
+    width: 45%;
+    border-radius: 12px;
+    animation: float 3s ease-in-out infinite;
+}
+ 
+ 
+/* ---------- Page Banners ---------- */
+.banner,
+.page-header,
+.welcome {
+    text-align: center;
+    background: linear-gradient(to right, var(--main), #2e5a8f);
+    color: var(--white);
+    padding: 70px 8%;
+}
+ 
+.banner h1,
+.page-header h2,
+.welcome h2 {
+    color: var(--white);
+    font-size: 40px;
+}
+ 
+.banner p,
+.page-header p,
+.welcome p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 18px;
+}
+ 
+ 
+/* ---------- Stats ---------- */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background-color: var(--main);
+    padding: 40px 8%;
+}
+ 
+.stat {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+ 
+.stat:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+ 
+.stat h4 {
+    color: var(--white);
+    font-size: 22px;
+    margin-bottom: 0;
+}
+ 
+ 
+/* ---------- Grids (card containers) ---------- */
+.courses-list,
+.features-list,
+.reason-list,
+.learning-list,
+.testimonial-list,
+.catalog-list,
+.review-list,
+.related-list,
+.continue-list,
+.assignment-list,
+.achievement-list,
+.recommend-list,
+.schedule-list,
+.mission,
+.value,
+.team,
+.category,
+.popular,
+.enrolled,
+.completed,
+.info,
+.summary,
+.outcome ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+ 
+/* Headings inside a grid take the full row */
+.value h2,
+.team h2,
+.category h2,
+.popular h2,
+.enrolled h2,
+.completed h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+ 
+ 
+/* ---------- Cards ---------- */
+.course,
+.feature,
+.reason-item,
+.learning-step,
+.testimonial-card,
+.catalog-card,
+.review-card,
+.related-card,
+.summary-card,
+.progress-item,
+.continue-card,
+.assignment-card,
+.achievement-card,
+.recommend-card,
+.schedule-day,
+.enrolled-card,
+.completed-card,
+.mission-card,
+.value-card,
+.team-card,
+.category-card,
+.popular-card,
+.info-card,
+.faq-card,
+.curriculum-module,
+.outcome li {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+ 
+.course:hover,
+.feature:hover,
+.reason-item:hover,
+.learning-step:hover,
+.testimonial-card:hover,
+.catalog-card:hover,
+.review-card:hover,
+.related-card:hover,
+.summary-card:hover,
+.continue-card:hover,
+.assignment-card:hover,
+.achievement-card:hover,
+.recommend-card:hover,
+.schedule-day:hover,
+.enrolled-card:hover,
+.completed-card:hover,
+.mission-card:hover,
+.value-card:hover,
+.team-card:hover,
+.category-card:hover,
+.popular-card:hover,
+.info-card:hover,
+.faq-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Cards with centered text */
+.course,
+.feature,
+.reason-item,
+.learning-step,
+.summary-card,
+.achievement-card,
+.schedule-day,
+.team-card,
+.popular-card,
+.info-card,
+.related-card,
+.recommend-card {
+    text-align: center;
+}
+ 
+/* Card images */
+.course img,
+.feature img,
+.catalog-card img,
+.related-card img,
+.recommend-card img,
+.enrolled-card img,
+.category-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+ 
+.team-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+}
+ 
+ 
+/* ---------- Home Page Sections ---------- */
+.features,
+.reason,
+.learning,
+.testimonial {
+    text-align: center;
+}
+ 
+.features > h3 {
+    font-size: 32px;
+}
+ 
+.features > p,
+.reason > p,
+.learning > p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+ 
+.feature p:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--main);
+}
+ 
+.feature p:last-child {
+    font-size: 22px;
+    color: var(--accent);
+}
+ 
+.learning-step span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: var(--white);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+ 
+.testimonial-card {
+    border-left: 5px solid var(--accent);
+    text-align: left;
+}
+ 
+.testimonial-card p:first-child {
+    font-style: italic;
+}
+ 
+ 
+/* ---------- Call To Action ---------- */
+.cta {
+    text-align: center;
+    background-color: var(--main);
+    color: var(--white);
+}
+ 
+.cta h2 {
+    color: var(--white);
+    font-size: 32px;
+}
+ 
+.cta p {
+    margin-bottom: 25px;
+}
+ 
+.cta button + button,
+.cta button + a,
+.cta a + a {
+    border-color: var(--white);
+    color: var(--white);
+}
+ 
+ 
+/* ---------- Courses Page ---------- */
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 8%;
+    border-bottom: 1px solid #dddddd;
+}
+ 
+.filter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+ 
+.filter input {
+    flex: 1;
+    min-width: 200px;
+}
+ 
+/* Filter buttons (My Courses page) */
+.filter > button {
+    background-color: var(--white);
+    color: var(--main);
+    border-color: var(--main);
+}
+ 
+.filter > button:hover {
+    background-color: var(--main);
+    color: var(--white);
+}
+ 
+.catalog-card p:first-of-type {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+ 
+.catalog-card p:last-of-type {
+    font-size: 22px;
+    color: var(--main);
+    margin-top: 10px;
+}
+ 
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 0;
+}
+ 
+.pagination a {
+    padding: 8px 16px;
+    border: 1px solid var(--main);
+    border-radius: 6px;
+}
+ 
+.pagination a:hover,
+.pagination .active {
+    background-color: var(--main);
+    color: var(--white);
+}
+ 
+ 
+/* ---------- Search ---------- */
+.search form {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+ 
+.search input {
+    flex: 1;
+}
+ 
+ 
+/* ---------- Course Details Page ---------- */
+.course-banner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--main);
+    color: var(--white);
+}
+ 
+.course-banner img {
+    width: 45%;
+    border-radius: 12px;
+}
+ 
+.course-banner-content {
+    flex: 1;
+}
+ 
+.course-banner h1 {
+    color: var(--white);
+    font-size: 38px;
+}
+ 
+.course-banner p {
+    margin-bottom: 5px;
+}
+ 
+.course-banner button {
+    margin-top: 20px;
+}
+ 
+.course-banner button + button {
+    border-color: var(--white);
+    color: var(--white);
+}
+ 
+.about-course p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    text-align: center;
+}
+ 
+.outcome li {
+    padding: 15px;
+    font-weight: bold;
+}
+ 
+.curriculum-module {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+ 
+.curriculum-module h3 {
+    font-size: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+}
+ 
+.curriculum-module li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+ 
+.requirement ul {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: disc;
+    padding-left: 20px;
+}
+ 
+.requirement li {
+    padding: 5px 0;
+}
+ 
+.instructor {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+ 
+.instructor img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+ 
+.instructor-content {
+    flex: 1;
+}
+ 
+.instructor h2 {
+    font-size: 30px;
+}
+ 
+.instructor p:nth-of-type(1) {
+    color: var(--accent);
+    font-weight: bold;
+}
+ 
+.review-card p:first-child {
+    color: var(--accent);
+    font-size: 20px;
+}
+ 
+.enrollment {
+    text-align: center;
+    background-color: var(--main);
+    color: var(--white);
+}
+ 
+.enrollment h2 {
+    color: var(--white);
+}
+ 
+.enrollment p {
+    margin-bottom: 25px;
+}
+ 
+.enrollment button + button {
+    border-color: var(--white);
+    color: var(--white);
+}
+ 
+ 
+/* ---------- Dashboard and My Courses ---------- */
+.summary {
+    padding-top: 40px;
+}
+ 
+.summary-card p {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 0;
+}
+ 
+.progress-item {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+ 
+.progress-item h4 {
+    margin-bottom: 5px;
+}
+ 
+.progress h2 {
+    margin-bottom: 30px;
+}
+ 
+progress {
+    width: 100%;
+    height: 12px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    appearance: none;
+    margin: 10px 0;
+}
+ 
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+}
+ 
+progress::-webkit-progress-value {
+    background-color: var(--accent);
+}
+ 
+progress::-moz-progress-bar {
+    background-color: var(--accent);
+}
+ 
+.activity ul {
+    max-width: 800px;
+    margin: 0 auto;
+}
+ 
+.activity li {
+    background-color: var(--light);
+    border-left: 5px solid var(--accent);
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    transition: padding-left 0.3s;
+}
+ 
+.activity li:hover {
+    padding-left: 25px;
+}
+ 
+.achievement-card {
+    font-size: 18px;
+    font-weight: bold;
+}
+ 
+.schedule-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+ 
+.schedule-day h4 {
+    color: var(--accent);
+}
+ 
+.goal p {
+    max-width: 800px;
+    margin: 0 auto 10px;
+}
+ 
+.goal progress {
+    display: block;
+    max-width: 800px;
+    margin: 10px auto;
+}
+ 
+.recommend > .recommend-card {
+    max-width: 350px;
+    margin: 0 auto;
+}
+ 
+.action,
+.action-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+ 
+.action h2 {
+    width: 100%;
+    margin-bottom: 15px;
+}
+ 
+ 
+/* ---------- About Page ---------- */
+.story {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+ 
+.story-content {
+    flex: 1;
+}
+ 
+.story img {
+    width: 45%;
+    border-radius: 12px;
+}
+ 
+.mission-card h3 {
+    color: var(--accent);
+}
+ 
+.value-card h4,
+.category-card h4,
+.faq-card h4 {
+    color: var(--main);
+}
+ 
+ 
+/* ---------- Category Page ---------- */
+.category-card p:nth-of-type(2) {
+    color: var(--accent);
+}
+ 
+.popular-card h4 {
+    font-size: 20px;
+}
+ 
+ 
+/* ---------- Contact Page ---------- */
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--light);
+    border-radius: 10px;
+}
+ 
+.form label {
+    font-weight: bold;
+}
+ 
+.form button {
+    align-self: flex-start;
+}
+ 
+.map-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #dfe6ee;
+    border: 2px dashed var(--main);
+    border-radius: 10px;
+}
+ 
+.faq-card {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+ 
+ 
+/* ---------- Footer ---------- */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 50px 8% 20px;
+    background-color: var(--main-dark);
+    color: #cccccc;
+}
+ 
+.footer > div {
+    flex: 1;
+    min-width: 200px;
+}
+ 
+.footer h3,
+.footer h4 {
+    color: var(--white);
+}
+ 
+.footer li {
+    margin-bottom: 8px;
+}
+ 
+.footer a {
+    color: #cccccc;
+}
+ 
+.footer a:hover {
+    color: var(--accent);
+}
+ 
+.footer > p {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+}
+ 
+ 
+/* ---------- Animations ---------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+ 
+    50% {
+        transform: translateY(-12px);
+    }
+ 
+    100% {
+        transform: translateY(0);
+    }
+}
+ 
+ 
+/* ---------- Responsive (Tablet and Mobile) ---------- */
+@media (max-width: 768px) {
+ 
+    .navbar,
+    .dashboard-navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+ 
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+ 
+    .hero,
+    .course-banner,
+    .story,
+    .instructor {
+        flex-direction: column;
+        text-align: center;
+    }
+ 
+    .hero img,
+    .course-banner img,
+    .story img {
+        width: 100%;
+    }
+ 
+    .hero h1,
+    .banner h1,
+    .course-banner h1 {
+        font-size: 30px;
+    }
+ 
+    .search form,
+    .filter form {
+        flex-direction: column;
+    }
+ 
+    section {
+        padding: 40px 5%;
+    }
+}
+ 

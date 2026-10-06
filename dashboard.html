@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | MS Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dashboard Navbar Section -->
+    <header class="dashboard-navbar">
+        <div class="dashboard-navbar-left">
+            <h1><a href="home.html">MS Learning Platform</a></h1>
+            <h2>Student Dashboard</h2>
+        </div>
+        <div class="dashboard-navbar-right">
+            <button type="button" title="Notifications">🔔</button>
+            <button type="button" title="Messages">✉️</button>
+            <a href="profile.html" title="User Profile">👤</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h2>Welcome Back, Sufian!</h2>
+            <p>Continue your learning journey and achieve your goals.</p>
+            <a href="lesson-player.html">Continue Learning</a>
+        </section>
+
+        <!-- Statistics Cards Section -->
+        <section class="summary">
+            <div class="summary-card">
+                <h4>Enrolled Courses</h4>
+                <p>6</p>
+            </div>
+            <div class="summary-card">
+                <h4>Completed Courses</h4>
+                <p>2</p>
+            </div>
+            <div class="summary-card">
+                <h4>Pending Assignments</h4>
+                <p>4</p>
+            </div>
+            <div class="summary-card">
+                <h4>Certificates Earned</h4>
+                <p>2</p>
+            </div>
+        </section>
+
+        <!-- Learning Progress Section -->
+        <section class="progress">
+            <h2>Learning Progress</h2>
+            <div class="progress-item">
+                <h4>JavaScript Bootcamp</h4>
+                <p>Progress: 75%</p>
+                <progress value="75" max="100">75%</progress>
+            </div>
+            <div class="progress-item">
+                <h4>Python Programming</h4>
+                <p>Progress: 50%</p>
+                <progress value="50" max="100">50%</progress>
+            </div>
+            <div class="progress-item">
+                <h4>Cyber Security Fundamentals</h4>
+                <p>Progress: 30%</p>
+                <progress value="30" max="100">30%</progress>
+            </div>
+        </section>
+
+        <!-- Continue Learning Section -->
+        <section class="continue">
+            <h2>Continue Learning</h2>
+            <div class="continue-list">
+                <div class="continue-card">
+                    <h4>JavaScript Bootcamp</h4>
+                    <p><strong>Current Lesson:</strong> DOM Events</p>
+                    <p><strong>Progress:</strong> 75%</p>
+                    <a href="lesson-player.html">Continue</a>
+                </div>
+                <div class="continue-card">
+                    <h4>Python Programming</h4>
+                    <p><strong>Current Lesson:</strong> Functions</p>
+                    <p><strong>Progress:</strong> 50%</p>
+                    <a href="lesson-player.html">Continue</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Assignments Section -->
+        <section class="assignment">
+            <h2>Upcoming Assignments</h2>
+            <div class="assignment-list">
+                <div class="assignment-card">
+                    <h4>JavaScript Quiz</h4>
+                    <p><strong>Due Date:</strong> 10 October 2026</p>
+                    <p><strong>Status:</strong> Pending</p>
+                </div>
+                <div class="assignment-card">
+                    <h4>Python Project</h4>
+                    <p><strong>Due Date:</strong> 15 October 2026</p>
+                    <p><strong>Status:</strong> Pending</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Activity Section -->
+        <section class="activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li><strong>Completed:</strong> JavaScript Variables Lesson</li>
+                <li><strong>Submitted:</strong> Python Assignment 1</li>
+                <li><strong>Earned:</strong> JavaScript Basics Badge</li>
+            </ul>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="achievement">
+            <h2>Achievements</h2>
+            <div class="achievement-list">
+                <div class="achievement-card">🏅 First Course Completed</div>
+                <div class="achievement-card">🏆 7-Day Learning Streak</div>
+                <div class="achievement-card">⭐ Top Performer</div>
+                <div class="achievement-card">🎓 JavaScript Certificate</div>
+            </div>
+        </section>
+
+        <!-- Recommended Courses Section -->
+        <section class="recommend">
+            <h2>Recommended For You</h2>
+            <div class="recommend-list">
+                <div class="recommend-card">
+                    <img src="download (1).jpeg" alt="React.js Bootcamp">
+                    <h4>React.js Bootcamp</h4>
+                    <p>★★★★★</p>
+                    <button type="button">Enroll</button>
+                </div>
+                <div class="recommend-card">
+                    <img src="download (1).jpeg" alt="Node.js Fundamentals">
+                    <h4>Node.js Fundamentals</h4>
+                    <p>★★★★</p>
+                    <button type="button">Enroll</button>
+                </div>
+                <div class="recommend-card">
+                    <img src="download (5).jpeg" alt="Advanced Cyber Security">
+                    <h4>Advanced Cyber Security</h4>
+                    <p>★★★★★</p>
+                    <button type="button">Enroll</button>
+                </div>
+                <div class="recommend-card">
+                    <img src="download (3).jpeg" alt="AI Essentials">
+                    <h4>AI Essentials</h4>
+                    <p>★★★★</p>
+                    <button type="button">Enroll</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Calendar Section -->
+        <section class="schedule">
+            <h2>Study Schedule</h2>
+            <div class="schedule-list">
+                <div class="schedule-day">
+                    <h4>Monday</h4>
+                    <p>JavaScript - 2 Hours</p>
+                </div>
+                <div class="schedule-day">
+                    <h4>Tuesday</h4>
+                    <p>Python - 1 Hour</p>
+                </div>
+                <div class="schedule-day">
+                    <h4>Wednesday</h4>
+                    <p>Cyber Security - 2 Hours</p>
+                </div>
+                <div class="schedule-day">
+                    <h4>Thursday</h4>
+                    <p>Assignments</p>
+                </div>
+                <div class="schedule-day">
+                    <h4>Friday</h4>
+                    <p>Revision</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions Section -->
+        <section class="action">
+            <h2>Quick Actions</h2>
+            <div class="action-list">
+                <a href="my-courses.html">Browse Courses</a>
+                <a href="assignments.html">View Assignments</a>
+                <a href="certificates.html">Download Certificates</a>
+                <a href="profile.html">Edit Profile</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-about">
+            <h3>MS Learning Platform</h3>
+            <p>Learn new skills online from expert instructors.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="contact.html">Contact US</a></li>
+                <li><a href="about.html">About US</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: info@mslearning.com</p>
+            <p>Phone: +92 300 0000000</p>
+        </div>
+        <p>&copy; 2026 MS Learning Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
